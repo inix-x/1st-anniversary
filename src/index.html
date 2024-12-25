@@ -40,16 +40,20 @@
       }
       body {
         margin: 0;
-        height: 200vh; /* Simulate scrolling effect */
+        height: 200vh;
         background: linear-gradient(
           to bottom,
           #ff9a9e,
+          #ffafa6,
           #ffb8b8,
+          #ffc2c4,
           #fad0c4,
+          #fcd5ce,
           #fcc5c0,
+          #fcb6d6,
           #fbc2eb
         );
-        background-size: 100% 300%; /* Stretches gradient for a smoother scroll */
+        background-size: 100% 300%;
         background-attachment: fixed;
         background-repeat: no-repeat;
       }
@@ -60,10 +64,15 @@
     style="
       background: linear-gradient(
         to bottom,
-        #ff9a9e #fbc2eb,
-        #fcc5c0,
+        #ff9a9e,
+        #ffafa6,
+        #ffb8b8,
+        #ffc2c4,
         #fad0c4,
-        #ffb8b8
+        #fcd5ce,
+        #fcc5c0,
+        #fcb6d6,
+        #fbc2eb
       );
       background-size: 100% 300%;
       background-attachment: scroll;
@@ -198,7 +207,7 @@
         data-rellax-speed="-2"
       >
         <div
-          class="py-16 px-8 md:px-24 bg-black/80"
+          class="py-16 px-8 md:px-24 bg-black/80 rounded-md"
           data-scroll-reveal="fade-in"
         >
           <h2 class="text-3xl font-semibold mb-4">How It All Started</h2>
