@@ -73,7 +73,7 @@ ScrollReveal().reveal("[data-scroll-reveal='scale-fade']", {
 });
 
 ScrollReveal().reveal("[data-scroll-reveal='delayed-fade']", {
-  viewFactor: 0.5, // Trigger animation when 50% of the element is visible
+  viewFactor: 0.25,
   duration: 1000,
   opacity: 0,
   distance: "20px",

@@ -1,4 +1,9 @@
-/* src/styles.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .section {
+    max-width: 200px;
+  }
+}
