@@ -55,7 +55,7 @@ function generateFallingPhotos({
       randomPhotoSrc = `${photoSrcFolder}${i}.png`;
     } else {
       randomTop = randomBetween(topMin, topMax); // e.g. -20% down to -200%
-      randomPhotoSrc = `resources/parallax_pic/photo.svg`;
+      randomPhotoSrc = `src/resources/parallax_pic/photo.svg`;
     }
 
     // Create an <img> element
