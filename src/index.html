@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our First Year Story</title>
+    <!-- Include Rellax and ScrollReveal -->
+    <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="text-white font-sans"
+    style="background-image: url('resources/background.svg')"
+  >
+    <!-- Loading Screen -->
+    <div
+      id="loading-screen"
+      class="fixed inset-0 bg-black flex items-center justify-center z-50"
+    >
+      <div class="text-center">
+        <svg
+          class="animate-spin h-12 w-12 text-white mx-auto mb-4"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            class="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          ></path>
+        </svg>
+        <p class="text-lg font-semibold">Loading...</p>
+      </div>
+    </div>
+
+    <!-- Parallax Container (Always Visible) -->
+    <!-- Move all SVG images here so they remain behind content but fully visible -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      <!-- Existing parallax images -->
+      <img
+        src="resources/photo.svg"
+        alt="Scattered SVG"
+        class="absolute rellax"
+        style="
+          top: 10%;
+          left: 15%;
+          width: 5rem;
+          height: 5rem;
+          transform: rotate(15deg);
+        "
+        data-rellax-speed="-2"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Scattered SVG"
+        class="absolute rellax"
+        style="
+          top: 50%;
+          left: 30%;
+          width: 5rem;
+          height: 5rem;
+          transform: rotate(-10deg);
+        "
+        data-rellax-speed="-3"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Scattered SVG"
+        class="absolute rellax"
+        style="
+          top: 80%;
+          left: 60%;
+          width: 3rem;
+          height: 3rem;
+          transform: rotate(25deg);
+        "
+        data-rellax-speed="-1"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Scattered SVG"
+        class="absolute rellax"
+        style="
+          top: 20%;
+          left: 75%;
+          width: 6rem;
+          height: 6rem;
+          transform: rotate(-20deg);
+        "
+        data-rellax-speed="-4"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Scattered SVG"
+        class="absolute rellax"
+        style="
+          top: 70%;
+          left: 10%;
+          width: 3.5rem;
+          height: 3.5rem;
+          transform: rotate(5deg);
+        "
+        data-rellax-speed="-2"
+      />
+
+      <!-- NEW falling photos (placed well above the viewport) -->
+
+      <!-- Example 1: Slightly above the viewport -->
+      <img
+        src="resources/photo.svg"
+        alt="Falling SVG"
+        class="absolute rellax"
+        style="
+          top: -30%;
+          left: 20%;
+          width: 4rem;
+          height: 4rem;
+          transform: rotate(10deg);
+        "
+        data-rellax-speed="-1"
+      />
+
+      <!-- Example 2: Even higher above the viewport -->
+      <img
+        src="resources/photo.svg"
+        alt="Falling SVG"
+        class="absolute rellax"
+        style="
+          top: -50%;
+          left: 65%;
+          width: 5rem;
+          height: 5rem;
+          transform: rotate(-15deg);
+        "
+        data-rellax-speed="-2"
+      />
+
+      <!-- Example 3: Far above the viewport for a longer fall -->
+      <img
+        src="resources/photo.svg"
+        alt="Falling SVG"
+        class="absolute rellax"
+        style="
+          top: -80%;
+          left: 40%;
+          width: 4rem;
+          height: 4rem;
+          transform: rotate(25deg);
+        "
+        data-rellax-speed="-3"
+      />
+
+      <!-- Example 4: Mix of negative top & rotated for variety -->
+      <img
+        src="resources/photo.svg"
+        alt="Falling SVG"
+        class="absolute rellax"
+        style="
+          top: -120%;
+          left: 10%;
+          width: 3rem;
+          height: 3rem;
+          transform: rotate(-35deg);
+        "
+        data-rellax-speed="-4"
+      />
+
+      <!-- Add more as needed -->
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 1"
+        class="absolute rellax"
+        style="
+          top: -20%;
+          left: 25%;
+          width: 4rem;
+          height: 4rem;
+          transform: rotate(10deg);
+        "
+        data-rellax-speed="-2"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 2"
+        class="absolute rellax"
+        style="
+          top: -40%;
+          left: 40%;
+          width: 5rem;
+          height: 5rem;
+          transform: rotate(-30deg);
+        "
+        data-rellax-speed="-3"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 3"
+        class="absolute rellax"
+        style="
+          top: -60%;
+          left: 60%;
+          width: 3.5rem;
+          height: 3.5rem;
+          transform: rotate(15deg);
+        "
+        data-rellax-speed="-1"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 4"
+        class="absolute rellax"
+        style="
+          top: -90%;
+          left: 10%;
+          width: 4rem;
+          height: 4rem;
+          transform: rotate(-5deg);
+        "
+        data-rellax-speed="-2"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 5"
+        class="absolute rellax"
+        style="
+          top: -120%;
+          left: 75%;
+          width: 5rem;
+          height: 5rem;
+          transform: rotate(-25deg);
+        "
+        data-rellax-speed="-4"
+      />
+      <!-- Additional -->
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 1"
+        class="absolute rellax"
+        style="
+          top: -40%;
+          left: 15%;
+          width: 4rem;
+          height: 4rem;
+          transform: rotate(12deg);
+        "
+        data-rellax-speed="-2"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 2"
+        class="absolute rellax"
+        style="
+          top: -55%;
+          left: 25%;
+          width: 3rem;
+          height: 3rem;
+          transform: rotate(-20deg);
+        "
+        data-rellax-speed="-3"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 3"
+        class="absolute rellax"
+        style="
+          top: -65%;
+          left: 75%;
+          width: 5rem;
+          height: 5rem;
+          transform: rotate(25deg);
+        "
+        data-rellax-speed="-1"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 4"
+        class="absolute rellax"
+        style="
+          top: -80%;
+          left: 45%;
+          width: 4rem;
+          height: 4rem;
+          transform: rotate(-10deg);
+        "
+        data-rellax-speed="-4"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 5"
+        class="absolute rellax"
+        style="
+          top: -100%;
+          left: 55%;
+          width: 3.5rem;
+          height: 3.5rem;
+          transform: rotate(5deg);
+        "
+        data-rellax-speed="-2"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 6"
+        class="absolute rellax"
+        style="
+          top: -120%;
+          left: 10%;
+          width: 4rem;
+          height: 4rem;
+          transform: rotate(15deg);
+        "
+        data-rellax-speed="-3"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 7"
+        class="absolute rellax"
+        style="
+          top: -140%;
+          left: 80%;
+          width: 4.5rem;
+          height: 4.5rem;
+          transform: rotate(30deg);
+        "
+        data-rellax-speed="-2"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 8"
+        class="absolute rellax"
+        style="
+          top: -160%;
+          left: 33%;
+          width: 3.5rem;
+          height: 3.5rem;
+          transform: rotate(-15deg);
+        "
+        data-rellax-speed="-1"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 9"
+        class="absolute rellax"
+        style="
+          top: -180%;
+          left: 88%;
+          width: 4rem;
+          height: 4rem;
+          transform: rotate(25deg);
+        "
+        data-rellax-speed="-4"
+      />
+      <img
+        src="resources/photo.svg"
+        alt="Falling Photo 10"
+        class="absolute rellax"
+        style="
+          top: -200%;
+          left: 5%;
+          width: 5rem;
+          height: 5rem;
+          transform: rotate(-20deg);
+        "
+        data-rellax-speed="-3"
+      />
+    </div>
+
+    <!-- Main Content Container (above the parallax layer) -->
+    <div class="relative z-10">
+      <!-- Header Section -->
+      <header
+        class="h-screen flex items-center justify-center bg-transparent"
+        data-rellax-speed="-3"
+      >
+        <section class="py-16 px-8 md:px-24" data-scroll-reveal="fade-in">
+          <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold drop-shadow-md">
+              Our First Year Together
+            </h1>
+          </div>
+        </section>
+      </header>
+
+      <!-- SECTION 1: "How It All Started" -->
+      <!-- You can adjust background color opacity if you want the parallax images to show through. -->
+      <section
+        class="h-screen flex items-center justify-center"
+        data-rellax-speed="-2"
+      >
+        <div class="py-16 px-8 md:px-24" data-scroll-reveal="fade-in">
+          <h2 class="text-3xl font-semibold mb-4">How It All Started</h2>
+          <p class="text-lg leading-relaxed">
+            It all began with a simple message, a moment that sparked a
+            connection. From that moment, our journey together started to
+            unfold.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 2: "Here's to Many More Years" -->
+      <section
+        class="h-screen flex items-center justify-center"
+        data-rellax-speed="-2"
+      >
+        <div class="py-16 px-8 md:px-24" data-scroll-reveal="fade-in">
+          <h2 class="text-3xl font-semibold mb-4">Here's to Many More Years</h2>
+          <p class="text-lg leading-relaxed">
+            Our first year together is just the beginning of our story. Here's
+            to creating more beautiful moments and building a future filled with
+            love.
+          </p>
+        </div>
+      </section>
+      <!-- SECTION 2: "Here's to Many More Years" -->
+      <section
+        class="h-screen flex items-center justify-center"
+        data-rellax-speed="-2"
+      >
+        <div class="py-16 px-8 md:px-24" data-scroll-reveal="fade-in">
+          <h2 class="text-3xl font-semibold mb-4">Here's to Many More Years</h2>
+          <p class="text-lg leading-relaxed">
+            Our first year together is just the beginning of our story. Here's
+            to creating more beautiful moments and building a future filled with
+            love.
+          </p>
+        </div>
+      </section>
+      <!-- SECTION 2: "Here's to Many More Years" -->
+      <section
+        class="h-screen flex items-center justify-center"
+        data-rellax-speed="-2"
+      >
+        <div class="py-16 px-8 md:px-24" data-scroll-reveal="fade-in">
+          <h2 class="text-3xl font-semibold mb-4">Here's to Many More Years</h2>
+          <p class="text-lg leading-relaxed">
+            Our first year together is just the beginning of our story. Here's
+            to creating more beautiful moments and building a future filled with
+            love.
+          </p>
+        </div>
+      </section>
+      <!-- SECTION 2: "Here's to Many More Years" -->
+      <section
+        class="h-screen flex items-center justify-center"
+        data-rellax-speed="-2"
+      >
+        <div class="py-16 px-8 md:px-24" data-scroll-reveal="fade-in">
+          <h2 class="text-3xl font-semibold mb-4">Here's to Many More Years</h2>
+          <p class="text-lg leading-relaxed">
+            Our first year together is just the beginning of our story. Here's
+            to creating more beautiful moments and building a future filled with
+            love.
+          </p>
+        </div>
+      </section>
+      <!-- SECTION 2: "Here's to Many More Years" -->
+      <section
+        class="h-screen flex items-center justify-center"
+        data-rellax-speed="-2"
+      >
+        <div class="py-16 px-8 md:px-24" data-scroll-reveal="fade-in">
+          <h2 class="text-3xl font-semibold mb-4">Here's to Many More Years</h2>
+          <p class="text-lg leading-relaxed">
+            Our first year together is just the beginning of our story. Here's
+            to creating more beautiful moments and building a future filled with
+            love.
+          </p>
+        </div>
+      </section>
+    </div>
+    <!-- End .relative.z-10 -->
+
+    <script>
+      // Hide the loading screen once the page is fully loaded
+      window.addEventListener("load", () => {
+        const loadingScreen = document.getElementById("loading-screen");
+        loadingScreen.style.transition = "opacity 0.5s ease-out";
+        loadingScreen.style.opacity = "0";
+
+        setTimeout(() => {
+          loadingScreen.style.display = "none";
+        }, 500);
+      });
+
+      // Initialize Rellax.js
+      const rellax = new Rellax(".rellax");
+
+      // Initialize ScrollReveal.js
+      ScrollReveal().reveal("[data-scroll-reveal]", {
+        distance: "50px",
+        duration: 1000,
+        easing: "ease-in-out",
+        scale: 0.85,
+        reset: true,
+      });
+    </script>
+  </body>
+</html>
