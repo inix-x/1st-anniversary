@@ -1,7 +1,7 @@
 function generateFallingPhotos({
   containerId = "parallax-container",
   count = 10,
-  photoSrcFolder = "resources/parallax_pic/", // Folder containing the photos
+  photoSrcFolder = "src/resources/parallax_pic/", // Folder containing the photos
   photoSrcMin = 1, // Minimum photo index
   photoSrcMax = 2, // Maximum photo index
   initialTopMax = 5,
