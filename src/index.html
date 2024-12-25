@@ -45,8 +45,10 @@
 
     <!-- Parallax Container (Always Visible) -->
     <!-- Move all SVG images here so they remain behind content but fully visible -->
-    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      <!-- Existing parallax images -->
+    <div
+      id="parallax-container"
+      class="fixed inset-0 overflow-hidden pointer-events-none z-0"
+    >
       <img
         src="resources/photo.svg"
         alt="Scattered SVG"
@@ -111,266 +113,6 @@
           transform: rotate(5deg);
         "
         data-rellax-speed="-2"
-      />
-
-      <!-- NEW falling photos (placed well above the viewport) -->
-
-      <!-- Example 1: Slightly above the viewport -->
-      <img
-        src="resources/photo.svg"
-        alt="Falling SVG"
-        class="absolute rellax"
-        style="
-          top: -30%;
-          left: 20%;
-          width: 4rem;
-          height: 4rem;
-          transform: rotate(10deg);
-        "
-        data-rellax-speed="-1"
-      />
-
-      <!-- Example 2: Even higher above the viewport -->
-      <img
-        src="resources/photo.svg"
-        alt="Falling SVG"
-        class="absolute rellax"
-        style="
-          top: -50%;
-          left: 65%;
-          width: 5rem;
-          height: 5rem;
-          transform: rotate(-15deg);
-        "
-        data-rellax-speed="-2"
-      />
-
-      <!-- Example 3: Far above the viewport for a longer fall -->
-      <img
-        src="resources/photo.svg"
-        alt="Falling SVG"
-        class="absolute rellax"
-        style="
-          top: -80%;
-          left: 40%;
-          width: 4rem;
-          height: 4rem;
-          transform: rotate(25deg);
-        "
-        data-rellax-speed="-3"
-      />
-
-      <!-- Example 4: Mix of negative top & rotated for variety -->
-      <img
-        src="resources/photo.svg"
-        alt="Falling SVG"
-        class="absolute rellax"
-        style="
-          top: -120%;
-          left: 10%;
-          width: 3rem;
-          height: 3rem;
-          transform: rotate(-35deg);
-        "
-        data-rellax-speed="-4"
-      />
-
-      <!-- Add more as needed -->
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 1"
-        class="absolute rellax"
-        style="
-          top: -20%;
-          left: 25%;
-          width: 4rem;
-          height: 4rem;
-          transform: rotate(10deg);
-        "
-        data-rellax-speed="-2"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 2"
-        class="absolute rellax"
-        style="
-          top: -40%;
-          left: 40%;
-          width: 5rem;
-          height: 5rem;
-          transform: rotate(-30deg);
-        "
-        data-rellax-speed="-3"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 3"
-        class="absolute rellax"
-        style="
-          top: -60%;
-          left: 60%;
-          width: 3.5rem;
-          height: 3.5rem;
-          transform: rotate(15deg);
-        "
-        data-rellax-speed="-1"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 4"
-        class="absolute rellax"
-        style="
-          top: -90%;
-          left: 10%;
-          width: 4rem;
-          height: 4rem;
-          transform: rotate(-5deg);
-        "
-        data-rellax-speed="-2"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 5"
-        class="absolute rellax"
-        style="
-          top: -120%;
-          left: 75%;
-          width: 5rem;
-          height: 5rem;
-          transform: rotate(-25deg);
-        "
-        data-rellax-speed="-4"
-      />
-      <!-- Additional -->
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 1"
-        class="absolute rellax"
-        style="
-          top: -40%;
-          left: 15%;
-          width: 4rem;
-          height: 4rem;
-          transform: rotate(12deg);
-        "
-        data-rellax-speed="-2"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 2"
-        class="absolute rellax"
-        style="
-          top: -55%;
-          left: 25%;
-          width: 3rem;
-          height: 3rem;
-          transform: rotate(-20deg);
-        "
-        data-rellax-speed="-3"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 3"
-        class="absolute rellax"
-        style="
-          top: -65%;
-          left: 75%;
-          width: 5rem;
-          height: 5rem;
-          transform: rotate(25deg);
-        "
-        data-rellax-speed="-1"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 4"
-        class="absolute rellax"
-        style="
-          top: -80%;
-          left: 45%;
-          width: 4rem;
-          height: 4rem;
-          transform: rotate(-10deg);
-        "
-        data-rellax-speed="-4"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 5"
-        class="absolute rellax"
-        style="
-          top: -100%;
-          left: 55%;
-          width: 3.5rem;
-          height: 3.5rem;
-          transform: rotate(5deg);
-        "
-        data-rellax-speed="-2"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 6"
-        class="absolute rellax"
-        style="
-          top: -120%;
-          left: 10%;
-          width: 4rem;
-          height: 4rem;
-          transform: rotate(15deg);
-        "
-        data-rellax-speed="-3"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 7"
-        class="absolute rellax"
-        style="
-          top: -140%;
-          left: 80%;
-          width: 4.5rem;
-          height: 4.5rem;
-          transform: rotate(30deg);
-        "
-        data-rellax-speed="-2"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 8"
-        class="absolute rellax"
-        style="
-          top: -160%;
-          left: 33%;
-          width: 3.5rem;
-          height: 3.5rem;
-          transform: rotate(-15deg);
-        "
-        data-rellax-speed="-1"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 9"
-        class="absolute rellax"
-        style="
-          top: -180%;
-          left: 88%;
-          width: 4rem;
-          height: 4rem;
-          transform: rotate(25deg);
-        "
-        data-rellax-speed="-4"
-      />
-      <img
-        src="resources/photo.svg"
-        alt="Falling Photo 10"
-        class="absolute rellax"
-        style="
-          top: -200%;
-          left: 5%;
-          width: 5rem;
-          height: 5rem;
-          transform: rotate(-20deg);
-        "
-        data-rellax-speed="-3"
       />
     </div>
 
@@ -478,7 +220,85 @@
       </section>
     </div>
     <!-- End .relative.z-10 -->
+    <script>
+      function generateFallingPhotos({
+        containerId = "parallax-container",
+        count = 10,
+        photoSrc = "resources/photo.svg",
+        initialTopMin = 5,
+        initialTopMax = 10,
+        leftMin = 10,
+        leftMax = 90,
+        rotateMin = -30,
+        rotateMax = 30,
+        sizeMin = 3,
+        sizeMax = 6,
+        rellaxSpeedMin = -1,
+        rellaxSpeedMax = -4,
+      } = {}) {
+        // 1. Find the container
+        const container = document.getElementById(containerId);
+        if (!container) {
+          console.error(`Container with ID "${containerId}" not found.`);
+          return;
+        }
+        let topMax = initialTopMax;
+        let topMin = initialTopMin;
+        // 2. Create and append the images
+        for (let i = 1; i <= count; i++) {
+          // Randomize top, left, rotation, size, and rellax speed
+          topMax += -initialTopMax;
+          topMin += -initialTopMin;
+          const randomTop = randomBetween(topMin, topMax); // e.g. -20% down to -200%
+          const randomLeft = randomBetween(leftMin, leftMax); // e.g. 0% to 80%
+          const randomRotate = randomBetween(rotateMin, rotateMax);
+          const randomSize = randomBetween(sizeMin, sizeMax);
+          const randomRellaxSpeed = randomIntBetween(
+            rellaxSpeedMax,
+            rellaxSpeedMin
+          );
+          // NOTE: Since rellax speeds are negative, pass (max, min) to get negative values
 
+          // Create an <img> element
+          const img = document.createElement("img");
+          img.src = photoSrc;
+          img.alt = `Falling Photo ${i}`;
+          img.className = "absolute rellax"; // for Rellax to pick up
+          img.style.top = `${randomTop}%`;
+          img.style.left = `${randomLeft}%`;
+          img.style.width = `${randomSize}rem`;
+          img.style.height = `${randomSize}rem`;
+          img.style.transform = `rotate(${randomRotate}deg)`;
+          img.setAttribute("data-rellax-speed", randomRellaxSpeed);
+
+          // Append to container
+          container.appendChild(img);
+        }
+      }
+
+      // Helper function for random floating numbers
+      function randomBetween(min, max) {
+        // If min > max, swap them
+        if (min > max) [min, max] = [max, min];
+        return Math.random() * (max - min) + min; // e.g. 5.123
+      }
+
+      // Helper function for random integers (inclusive)
+      function randomIntBetween(min, max) {
+        // If min > max, swap them
+        if (min > max) [min, max] = [max, min];
+        return Math.floor(Math.random() * (max - min + 1)) + min; // e.g. 3
+      }
+
+      // Example usage:
+      window.addEventListener("load", () => {
+        // Generate 10 falling photos
+        generateFallingPhotos({ count: 200 });
+
+        // Then initialize Rellax
+        const rellax = new Rellax(".rellax");
+      });
+    </script>
     <script>
       // Hide the loading screen once the page is fully loaded
       window.addEventListener("load", () => {
@@ -490,10 +310,6 @@
           loadingScreen.style.display = "none";
         }, 500);
       });
-
-      // Initialize Rellax.js
-      const rellax = new Rellax(".rellax");
-
       // Initialize ScrollReveal.js
       ScrollReveal().reveal("[data-scroll-reveal]", {
         distance: "50px",
