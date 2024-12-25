@@ -133,7 +133,6 @@
       </header>
 
       <!-- SECTION 1: "How It All Started" -->
-      <!-- You can adjust background color opacity if you want the parallax images to show through. -->
       <section
         class="h-screen flex items-center justify-center"
         data-rellax-speed="-2"
@@ -299,24 +298,17 @@
         const rellax = new Rellax(".rellax");
       });
     </script>
+    <script src="js/loading.js"></script>
+    <script src="js/ScrollReveal.config.js"></script>
     <script>
-      // Hide the loading screen once the page is fully loaded
-      window.addEventListener("load", () => {
-        const loadingScreen = document.getElementById("loading-screen");
-        loadingScreen.style.transition = "opacity 0.5s ease-out";
-        loadingScreen.style.opacity = "0";
+      document.addEventListener("DOMContentLoaded", function () {
+        // Disable automatic scroll restoration (if supported)
+        if ("scrollRestoration" in history) {
+          history.scrollRestoration = "manual";
+        }
 
-        setTimeout(() => {
-          loadingScreen.style.display = "none";
-        }, 500);
-      });
-      // Initialize ScrollReveal.js
-      ScrollReveal().reveal("[data-scroll-reveal]", {
-        distance: "50px",
-        duration: 1000,
-        easing: "ease-in-out",
-        scale: 0.85,
-        reset: true,
+        // Force the window to start at the top
+        window.scrollTo(0, 0);
       });
     </script>
   </body>
