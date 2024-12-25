@@ -14,7 +14,7 @@ window.addEventListener("load", function () {
     const startButton = document.createElement("button");
     startButton.innerText = "Scroll Through Our 2024";
     startButton.className =
-      "bg-white text-black px-4 py-2 rounded mt-4 fade-in";
+      "bg-white text-black px-8 py-4 rounded-md mt-4 fade-in";
 
     // On button click: play music (if possible), then fade out
     startButton.addEventListener("click", () => {

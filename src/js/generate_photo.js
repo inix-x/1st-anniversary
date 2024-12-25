@@ -4,7 +4,6 @@ function generateFallingPhotos({
   photoSrcFolder = "resources/parallax_pic/", // Folder containing the photos
   photoSrcMin = 1, // Minimum photo index
   photoSrcMax = 2, // Maximum photo index
-  initialTopMin = 3,
   initialTopMax = 5,
   leftMin = 10,
   leftMax = 90,
@@ -36,8 +35,8 @@ function generateFallingPhotos({
   //     return;
   //   }
 
-  let topMax = initialTopMax;
-  let topMin = initialTopMin;
+  let topMax = 50;
+  let topMin = 40;
 
   // 2. Create and append the images
   for (let i = 1; i <= count; i++) {
@@ -101,7 +100,7 @@ function shuffleArray(array) {
 // Example usage:
 window.addEventListener("load", () => {
   // Generate 10 falling photos
-  generateFallingPhotos({ count: 200, photoSrcMax: 13 });
+  generateFallingPhotos({ count: 100, photoSrcMax: 13 });
 
   // Then initialize Rellax
   const rellax = new Rellax(".rellax");
