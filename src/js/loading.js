@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
     }
 
     // Add the fade-out class
-    startScreen.classList.add("fade-out");
+    startScreen.classList.add("fade-out-2s");
 
     // After fade-out animation finishes, hide the element completely
     startScreen.addEventListener(
