@@ -4,7 +4,7 @@ function generateFallingPhotos({
   photoSrcFolder = "resources/parallax_pic/", // Folder containing the photos
   photoSrcMin = 1, // Minimum photo index
   photoSrcMax = 2, // Maximum photo index
-  initialTopMin = 2,
+  initialTopMin = 3,
   initialTopMax = 5,
   leftMin = 10,
   leftMax = 90,
@@ -12,8 +12,8 @@ function generateFallingPhotos({
   rotateMax = 30,
   sizeMin = 3,
   sizeMax = 6,
-  rellaxSpeedMin = -1,
-  rellaxSpeedMax = -4,
+  rellaxSpeedMin = -3,
+  rellaxSpeedMax = -5,
 } = {}) {
   // 1. Find the container
   const container = document.getElementById(containerId);
@@ -43,7 +43,7 @@ function generateFallingPhotos({
   for (let i = 1; i <= count; i++) {
     // Randomize top, left, rotation, size, and rellax speed
     topMax += -initialTopMax;
-    topMin += -initialTopMin;
+    topMin += -initialTopMax;
     let randomTop;
     let randomPhotoSrc;
     const randomLeft = randomBetween(leftMin, leftMax); // e.g. 0% to 80%
