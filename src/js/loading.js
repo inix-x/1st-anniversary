@@ -13,9 +13,12 @@ window.addEventListener("load", function () {
 
     // Create the "Enable Music" button
     const enableAudioButton = document.createElement("button");
-    enableAudioButton.textContent = "Enable Music";
+    enableAudioButton.innerHTML = `
+    <p>Enable Music</p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 4.1L12 6M5.1 8l-2.9-.8M6 12l-1.9 2M7.2 2.2L8 5.1m1.037 4.59a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"/></svg>
+          `;
     enableAudioButton.className =
-      "bg-white text-black px-4 py-2 rounded-md drop-shadow-md fade-in";
+      "bg-white text-black px-4 py-2 rounded-md drop-shadow-md fade-in gap-x-2 items-center flex flex-row";
 
     // Append the button to the start-screen (or .text-center if you prefer)
     startScreen.appendChild(enableAudioButton);
