@@ -22,18 +22,18 @@ function generateFallingPhotos({
   }
 
   // Generate a pool of unique photo indices and shuffle it
-  //   const photoIndices = Array.from(
-  //     { length: photoSrcMax - photoSrcMin + 1 },
-  //     (_, i) => i + photoSrcMin
-  //   );
-  //   shuffleArray(photoIndices);
+  const photoIndices = Array.from(
+    { length: photoSrcMax - photoSrcMin + 1 },
+    (_, i) => i + photoSrcMin
+  );
+  shuffleArray(photoIndices);
 
-  //   if (count > photoIndices.length) {
-  //     console.error(
-  //       `Count (${count}) exceeds the number of unique photo indices (${photoIndices.length}).`
-  //     );
-  //     return;
-  //   }
+  if (count > photoIndices.length) {
+    console.error(
+      `Count (${count}) exceeds the number of unique photo indices (${photoIndices.length}).`
+    );
+    return;
+  }
 
   let topMax = 50;
   let topMin = 40;
@@ -49,14 +49,13 @@ function generateFallingPhotos({
     const randomRotate = randomBetween(rotateMin, rotateMax);
     const randomSize = randomBetween(sizeMin, sizeMax);
     const randomRellaxSpeed = randomIntBetween(rellaxSpeedMax, rellaxSpeedMin);
-    // const randomPhotoIndex = photoIndices.pop(); // Get a unique index
+    const randomPhotoIndex = photoIndices.pop(); // Get a unique index
     if (i <= 10) {
-      randomTop = randomBetween(10, 90); // e.g. -20% down to -200%
-      randomPhotoSrc = `${photoSrcFolder}${i}.png`;
+      randomTop = randomBetween(10, 90);
     } else {
-      randomTop = randomBetween(topMin, topMax); // e.g. -20% down to -200%
-      randomPhotoSrc = `src/resources/parallax_pic/photo.svg`;
+      randomTop = randomBetween(topMin, topMax);
     }
+    randomPhotoSrc = `${photoSrcFolder}${randomPhotoIndex}.png`;
 
     // Create an <img> element
     const img = document.createElement("img");
@@ -100,7 +99,7 @@ function shuffleArray(array) {
 // Example usage:
 window.addEventListener("load", () => {
   // Generate 10 falling photos
-  generateFallingPhotos({ count: 100, photoSrcMax: 13 });
+  generateFallingPhotos({ count: 100, photoSrcMax: 100 });
 
   // Then initialize Rellax
   const rellax = new Rellax(".rellax");
