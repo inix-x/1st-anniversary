@@ -49,6 +49,9 @@ function generateFallingPhotos({
     const randomRotate = randomBetween(rotateMin, rotateMax);
     const randomSize = randomBetween(sizeMin, sizeMax);
     const randomRellaxSpeed = randomIntBetween(rellaxSpeedMax, rellaxSpeedMin);
+    const tailwindOpacities = ["opacity-[50%]", "opacity-[70%]"];
+    const randomOpacityClass =
+      tailwindOpacities[Math.floor(Math.random() * tailwindOpacities.length)];
     const randomPhotoIndex = photoIndices.pop(); // Get a unique index
     if (i <= 10) {
       randomTop = randomBetween(10, 90);
@@ -61,7 +64,7 @@ function generateFallingPhotos({
     const img = document.createElement("img");
     img.src = randomPhotoSrc;
     img.alt = `Falling Photo ${i}`;
-    img.className = "absolute rellax filter drop-shadow-md";
+    img.className = `absolute rellax filter drop-shadow-md ${randomOpacityClass}`;
     img.style.top = `${randomTop}%`;
     img.style.left = `${randomLeft}%`;
     img.style.width = `${randomSize}rem`;
