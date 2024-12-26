@@ -8,13 +8,15 @@ window.addEventListener("load", function () {
   setTimeout(() => {
     if (spinner) {
       spinner.style.display = "none"; // Just hides the spinner
+      startScreen.className =
+        "bg-[#ffafa6] transition-colors duration-300 fixed inset-0 flex items-center justify-center z-50";
     }
 
     // Create the start button
     const startButton = document.createElement("button");
     startButton.innerText = "Scroll Through Our 2024";
     startButton.className =
-      "bg-white text-black px-8 py-4 rounded-md mt-4 fade-in";
+      "bg-white text-black px-8 py-4 rounded-md mt-4 fade-in drop-shadow-md";
 
     // On button click: play music (if possible), then fade out
     startButton.addEventListener("click", () => {
