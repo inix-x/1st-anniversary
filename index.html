@@ -39,7 +39,7 @@
       }
       body {
         margin: 0;
-        height: 200vh;
+        height: 400vh; /* Increased height for better parallax effect */
         background: linear-gradient(
           to bottom,
           #ff9a9e,
@@ -52,33 +52,14 @@
           #fcb6d6,
           #fbc2eb
         );
-        background-size: 100% 300%;
+        background-size: 100% 400%; /* Adjusted size to match the height */
         background-attachment: fixed;
         background-repeat: no-repeat;
+        background-position: center top;
       }
     </style>
   </head>
-  <body
-    class="text-white font-sans"
-    style="
-      background: linear-gradient(
-        to bottom,
-        #ff9a9e,
-        #ffafa6,
-        #ffb8b8,
-        #ffc2c4,
-        #fad0c4,
-        #fcd5ce,
-        #fcc5c0,
-        #fcb6d6,
-        #fbc2eb
-      );
-      background-size: 100% 300%;
-      background-attachment: scroll;
-      background-position: center top;
-    "
-    id="parallax-body"
-  >
+  <body class="text-white font-sans" id="parallax-body">
     <!-- Loading Screen -->
     <div
       id="start-screen"
@@ -211,8 +192,10 @@
           class="py-16 px-8 md:px-24 bg-black/50 rounded-md"
           data-scroll-reveal="delayed-fade"
         >
-          <h2 class="text-3xl font-semibold mb-4">And, from there...</h2>
-          <p class="text-lg leading-relaxed">We never stopped dating</p>
+          <h2 class="text-3xl font-semibold mb-4">And from that moment...</h2>
+          <p class="text-lg leading-relaxed">
+            We never stopped creating memories together.
+          </p>
         </div>
       </section>
       <!-- SECTION 5: "More date Picture" -->
@@ -221,125 +204,224 @@
         data-rellax-speed="-1"
       >
         <div
-          class="flex flex-row sm:flex-col items-center justify-center py-16 px-8 md:px-24 rounded-md"
+          class="flex flex-col items-center justify-center py-16 px-8 md:px-24 rounded-md"
         >
           <img
             src="src/resources/pic/2nd_date.png"
             alt="First Message"
             class="rounded-lg shadow-lg transform -rotate-[5deg] -translate-x-[36px]"
             data-scroll-reveal="staggered-fade"
-            width="256"
-            height="256"
+            width="300"
+            height="300"
           />
           <img
             src="src/resources/pic/3rd_date.png"
             alt="First Message"
             class="rounded-lg shadow-lg transform rotate-[5deg] translate-x-[36px]"
             data-scroll-reveal="staggered-fade"
-            width="256"
-            height="256"
+            width="300"
+            height="300"
           />
           <img
-            src="src/resources/pic/th_date.png"
+            src="src/resources/pic/4th_date.png"
             alt="First Message"
             class="rounded-lg shadow-lg transform -rotate-[5deg] -translate-x-[36px]"
             data-scroll-reveal="staggered-fade"
-            width="256"
-            height="256"
-          />
-        </div>
-        <div
-          class="flex flex items-center justify-center py-16 px-8 md:px-24 rounded-md"
-        >
-          <img
-            src="src/resources/pic/first_date.png"
-            alt="First Message"
-            class="rounded-lg shadow-lg transform scale-75 -rotate-[5deg]"
-            data-scroll-reveal="parallax-slide"
-          />
-        </div>
-        <div
-          class="flex flex items-center justify-center py-16 px-8 md:px-24 rounded-md"
-        >
-          <img
-            src="src/resources/pic/first_date.png"
-            alt="First Message"
-            class="rounded-lg shadow-lg transform scale-75 -rotate-[5deg]"
-            data-scroll-reveal="parallax-slide"
-          />
-        </div>
-        <div
-          class="flex flex items-center justify-center py-16 px-8 md:px-24 rounded-md"
-        >
-          <img
-            src="src/resources/pic/first_date.png"
-            alt="First Message"
-            class="rounded-lg shadow-lg transform scale-75 -rotate-[5deg]"
-            data-scroll-reveal="parallax-slide"
-          />
-        </div>
-        <div
-          class="flex flex items-center justify-center py-16 px-8 md:px-24 rounded-md"
-        >
-          <img
-            src="src/resources/pic/first_date.png"
-            alt="First Message"
-            class="rounded-lg shadow-lg transform scale-75 -rotate-[5deg]"
-            data-scroll-reveal="parallax-slide"
+            width="300"
+            height="300"
           />
         </div>
       </section>
       <!-- SECTION 6: "Ate a lot" -->
       <section
-        class="h-screen flex items-center justify-center rellax"
+        class="min-h-screen flex flex-col sm:flex-row items-center justify-center rellax"
         data-rellax-speed="-1"
       >
         <div
           class="py-16 px-8 md:px-24 bg-black/50 rounded-md"
           data-scroll-reveal="delayed-fade"
         >
-          <h2 class="text-3xl font-semibold mb-4">We ate a lot</h2>
+          <h2 class="text-3xl font-semibold mb-4">We enjoyed so much food</h2>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center py-8 px-8 md:px-24 rounded-md"
+        >
+          <img
+            src="src/resources/pic/1st_food.png"
+            alt="First Message"
+            class="rounded-lg shadow-lg transform -rotate-[5deg] -translate-x-[36px]"
+            data-scroll-reveal="staggered-fade"
+            width="300"
+            height="300"
+          />
+          <img
+            src="src/resources/pic/2nd_food.png"
+            alt="First Message"
+            class="rounded-lg shadow-lg transform rotate-[5deg] translate-x-[36px]"
+            data-scroll-reveal="staggered-fade"
+            width="300"
+            height="300"
+          />
+          <img
+            src="src/resources/pic/3rd_food.png"
+            alt="First Message"
+            class="rounded-lg shadow-lg transform -rotate-[5deg] -translate-x-[36px]"
+            data-scroll-reveal="staggered-fade"
+            width="300"
+            height="300"
+          />
         </div>
       </section>
-      <!-- SECTION 2: "Here's to Many More Years" -->
+      <!-- SECTION 7: "Activities" -->
       <section
-        class="h-screen flex items-center justify-center"
+        class="min-h-screen flex flex-col sm:flex-row items-center justify-center rellax"
         data-rellax-speed="-1"
       >
-        <div class="py-16 px-8 md:px-24" data-scroll-reveal="fade-in">
-          <h2 class="text-3xl font-semibold mb-4">Here's to Many More Years</h2>
+        <div
+          class="flex flex-col items-center justify-center py-16 px-8 md:px-24 rounded-md"
+        >
+          <img
+            src="src/resources/pic/1st_act.png"
+            alt="First Message"
+            class="rounded-lg shadow-lg transform rotate-[5deg] translate-x-[36px]"
+            data-scroll-reveal="staggered-fade"
+            width="300"
+            height="300"
+          />
+          <img
+            src="src/resources/pic/2nd_act.png"
+            alt="First Message"
+            class="rounded-lg shadow-lg transform -rotate-[5deg] -translate-x-[36px]"
+            data-scroll-reveal="staggered-fade"
+            width="300"
+            height="300"
+          />
+          <img
+            src="src/resources/pic/3rd_act.png"
+            alt="First Message"
+            class="rounded-lg shadow-lg transform rotate-[5deg] translate-x-[36px]"
+            data-scroll-reveal="staggered-fade"
+            width="300"
+            height="300"
+          />
+        </div>
+        <div
+          class="py-16 px-8 md:px-24 bg-black/50 rounded-md"
+          data-scroll-reveal="delayed-fade"
+        >
+          <h2 class="text-3xl font-semibold mb-4">
+            We had so many Fun Moments
+          </h2>
+        </div>
+      </section>
+      <!-- SECTION 7: "International Travel" -->
+      <section
+        class="min-h-screen flex flex-col sm:flex-row items-center justify-center rellax"
+        data-rellax-speed="-1"
+      >
+        <div
+          class="py-16 px-8 md:px-24 bg-black/50 rounded-md"
+          data-scroll-reveal="delayed-fade"
+        >
+          <h2 class="text-3xl font-semibold mb-4">
+            And, our first International travel
+          </h2>
+        </div>
+      </section>
+      <section
+        class="min-h-screen flex flex-col sm:flex-row items-center justify-center rellax"
+        data-rellax-speed="-1"
+      >
+        <div
+          class="flex flex-col items-center justify-center py-16 px-8 md:px-24 rounded-md"
+        >
+          <img
+            src="src/resources/pic/1st_travel.png"
+            alt="First Message"
+            class="rounded-lg shadow-lg transform rotate-[5deg] translate-x-[36px]"
+            data-scroll-reveal="staggered-fade"
+            width="425"
+            height="425"
+          />
+          <img
+            src="src/resources/pic/2nd_travel.png"
+            alt="First Message"
+            class="rounded-lg shadow-lg transform -rotate-[5deg] -translate-x-[36px]"
+            data-scroll-reveal="staggered-fade"
+            width="425"
+            height="425"
+          />
+          <img
+            src="src/resources/pic/3rd_travel.png"
+            alt="First Message"
+            class="rounded-lg shadow-lg transform rotate-[5deg] translate-x-[36px]"
+            data-scroll-reveal="staggered-fade"
+            width="425"
+            height="425"
+          />
+        </div>
+      </section>
+      <!-- SECTION 8: "flowers" -->
+      <section
+        class="min-h-screen flex flex-col sm:flex-row items-center justify-center rellax"
+        data-rellax-speed="-1"
+      >
+        <div
+          class="py-16 px-8 md:px-24 bg-black/50 rounded-md"
+          data-scroll-reveal="delayed-fade"
+        >
+          <h2 class="text-3xl font-semibold mb-4">So Much Has Happened</h2>
           <p class="text-lg leading-relaxed">
-            Our first year together is just the beginning of our story. Here's
-            to creating more beautiful moments and building a future filled with
-            love.
+            This first year is just the opening chapter of our journey.
           </p>
         </div>
       </section>
-      <!-- SECTION 2: "Here's to Many More Years" -->
       <section
-        class="h-screen flex items-center justify-center"
+        class="min-h-screen flex flex-col sm:flex-row items-center justify-center rellax"
         data-rellax-speed="-1"
       >
-        <div class="py-16 px-8 md:px-24" data-scroll-reveal="fade-in">
-          <h2 class="text-3xl font-semibold mb-4">Here's to Many More Years</h2>
-          <p class="text-lg leading-relaxed">
-            Our first year together is just the beginning of our story. Here's
-            to creating more beautiful moments and building a future filled with
-            love.
-          </p>
+        <div
+          class="flex flex-col items-center justify-center py-16 px-8 md:px-24 rounded-md"
+        >
+          <img
+            src="src/resources/pic/1st_extra.png"
+            alt="First Message"
+            class="rounded-lg shadow-lg transform -rotate-[5deg] -translate-x-[36px]"
+            data-scroll-reveal="staggered-fade"
+            width="425"
+            height="425"
+          />
+          <img
+            src="src/resources/pic/2nd_extra.png"
+            alt="First Message"
+            class="rounded-lg shadow-lg transform rotate-[5deg] translate-x-[36px]"
+            data-scroll-reveal="staggered-fade"
+            width="425"
+            height="425"
+          />
+          <img
+            src="src/resources/pic/3rd_extra.png"
+            alt="First Message"
+            class="rounded-lg shadow-lg transform -rotate-[5deg] -translate-x-[36px]"
+            data-scroll-reveal="staggered-fade"
+            width="425"
+            height="425"
+          />
         </div>
       </section>
-      <!-- SECTION 2: "Here's to Many More Years" -->
+
       <section
-        class="h-screen flex items-center justify-center"
+        class="h-screen flex flex-col sm:flex-row items-center justify-center rellax"
         data-rellax-speed="-1"
       >
-        <div class="py-16 px-8 md:px-24" data-scroll-reveal="fade-in">
-          <h2 class="text-3xl font-semibold mb-4">Here's to Many More Years</h2>
+        <div
+          class="py-16 px-8 md:px-24 bg-black/50 rounded-md"
+          data-scroll-reveal="fade-in"
+        >
+          <h2 class="text-3xl font-semibold mb-4">Here’s to Us</h2>
           <p class="text-lg leading-relaxed">
-            Our first year together is just the beginning of our story. Here's
-            to creating more beautiful moments and building a future filled with
-            love.
+            One year down, and a lifetime to go. <br />Thank you for making
+            every moment so special.
           </p>
         </div>
       </section>

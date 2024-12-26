@@ -1,9 +1,8 @@
 ScrollReveal().reveal("[data-scroll-reveal='fade-in']", {
   distance: "50px",
-  duration: 1000,
+  duration: 2000,
   easing: "ease-in-out",
   scale: 0.85,
-  reset: true,
 });
 
 ScrollReveal().reveal("[data-scroll-reveal='fade-in-slide-up']", {
@@ -48,7 +47,7 @@ ScrollReveal().reveal("[data-scroll-reveal='staggered-fade']", {
   interval: 200, // Delay between animations
   origin: "bottom",
   distance: "40px",
-  duration: 800,
+  duration: 2000,
   opacity: 0,
   easing: "ease-out",
   reset: true,
@@ -56,7 +55,7 @@ ScrollReveal().reveal("[data-scroll-reveal='staggered-fade']", {
 
 ScrollReveal().reveal("[data-scroll-reveal='parallax-slide']", {
   origin: "top",
-  distance: "150px",
+  distance: "100px",
   duration: 2000,
   opacity: 0.5,
   easing: "ease-in-out",
@@ -66,7 +65,7 @@ ScrollReveal().reveal("[data-scroll-reveal='parallax-slide']", {
 ScrollReveal().reveal("[data-scroll-reveal='scale-fade']", {
   scale: 0.9,
   distance: "0px",
-  duration: 1200,
+  duration: 2000,
   opacity: 0,
   easing: "ease-in-out",
   reset: true,
@@ -74,8 +73,8 @@ ScrollReveal().reveal("[data-scroll-reveal='scale-fade']", {
 
 ScrollReveal().reveal("[data-scroll-reveal='delayed-fade']", {
   viewFactor: 0.25,
-  duration: 1000,
+  duration: 3000,
   opacity: 0,
-  distance: "20px",
+  distance: "100px",
   reset: true,
 });
