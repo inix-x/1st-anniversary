@@ -12,6 +12,8 @@ window.addEventListener("load", function () {
     }
 
     // Create the "Enable Music" button
+    startScreen.className =
+      "bg-black transition-colors duration-300 fixed inset-0 flex items-center justify-center z-50";
     const enableAudioButton = document.createElement("button");
     enableAudioButton.innerHTML = `
     <p>Start</p>
