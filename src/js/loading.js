@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
     enableAudioButton.addEventListener("click", () => {
       // Update the start screen style (pink background, etc.)
       startScreen.className =
-        "bg-[#ffafa6] transition-colors duration-300 fixed inset-0 flex items-center justify-center z-50";
+        "bg-[#ffafa6] transition-colors fade-in duration-300 fixed inset-0 flex items-center justify-center z-50";
 
       // Create the scrolling prompt
       const start = document.createElement("div");
