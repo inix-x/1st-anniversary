@@ -102,7 +102,7 @@ function shuffleArray(array) {
 // Example usage:
 window.addEventListener("load", () => {
   // Generate 10 falling photos
-  generateFallingPhotos({ count: 100, photoSrcMax: 100 });
+  generateFallingPhotos({ count: 80, photoSrcMax: 100 });
 
   // Then initialize Rellax
   const rellax = new Rellax(".rellax");
